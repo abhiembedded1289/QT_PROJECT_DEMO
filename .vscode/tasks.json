@@ -1,0 +1,48 @@
+{
+    "version":  "2.0.0",
+    "tasks":  [
+                  {
+                      "label":  "Qt: Build 01_hello_qt",
+                      "type":  "shell",
+                      "command":  "C:/Qt/Tools/CMake_64/bin/cmake.exe",
+                      "args":  [
+                                   "--build",
+                                   "${workspaceFolder}/01_hello_qt/build"
+                               ],
+                      "options":  {
+                                      "env":  {
+                                                  "PATH":  "C:/Qt/Tools/mingw1310_64/bin;C:/Qt/Tools/Ninja;C:/Qt/6.11.2/mingw_64/bin;${env:PATH}"
+                                              }
+                                  },
+                      "group":  {
+                                    "kind":  "build",
+                                    "isDefault":  true
+                                },
+                      "problemMatcher":  [
+                                             "$gcc"
+                                         ]
+                  },
+                  {
+                      "label":  "Qt: Configure 01_hello_qt",
+                      "type":  "shell",
+                      "command":  "C:/Qt/Tools/CMake_64/bin/cmake.exe",
+                      "args":  [
+                                   "-G",
+                                   "Ninja",
+                                   "-S",
+                                   "${workspaceFolder}/01_hello_qt",
+                                   "-B",
+                                   "${workspaceFolder}/01_hello_qt/build",
+                                   "-DCMAKE_PREFIX_PATH=C:/Qt/6.11.2/mingw_64"
+                               ],
+                      "options":  {
+                                      "env":  {
+                                                  "PATH":  "C:/Qt/Tools/mingw1310_64/bin;C:/Qt/Tools/Ninja;C:/Qt/6.11.2/mingw_64/bin;${env:PATH}"
+                                              }
+                                  },
+                      "problemMatcher":  [
+
+                                         ]
+                  }
+              ]
+}

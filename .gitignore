@@ -1,0 +1,14 @@
+build/
+.vs/
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+*.user
+*.pro.user
+*.o
+*.obj
+*.exe
+*.dll
+*.a
+*.lib
+*.autosave
